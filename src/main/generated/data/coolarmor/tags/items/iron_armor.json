@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:iron_helmet",
+    "minecraft:iron_chestplate",
+    "minecraft:iron_leggings",
+    "minecraft:iron_boots",
+    "coolarmor:iron_leathered_helmet",
+    "coolarmor:iron_leathered_chestplate",
+    "coolarmor:iron_leathered_leggings",
+    "coolarmor:iron_leathered_boots",
+    "coolarmor:iron_wooled_boots",
+    "coolarmor:iron_tinted_helmet"
+  ]
+}
