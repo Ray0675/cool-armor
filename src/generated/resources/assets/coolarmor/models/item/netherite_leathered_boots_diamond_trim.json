@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "coolarmor:item/leathered_boots_overlay",
-    "layer1": "coolarmor:item/netherite_leathered_boots",
-    "layer2": "minecraft:trims/items/boots_trim_diamond"
-  }
-}

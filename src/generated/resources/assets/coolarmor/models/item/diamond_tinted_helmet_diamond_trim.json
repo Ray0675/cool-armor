@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "coolarmor:item/tinted_helmet_overlay",
-    "layer1": "coolarmor:item/diamond_tinted_helmet",
-    "layer2": "minecraft:trims/items/helmet_trim_diamond"
-  }
-}
