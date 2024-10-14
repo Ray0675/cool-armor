@@ -1,0 +1,14 @@
+// 1.20.1	2024-10-14T18:06:16.4132084	Tags for minecraft:item mod id coolarmor
+153af5daea81bb3fc7d54de7604fa66f63e79636 data/coolarmor/tags/items/diamond_armor.json
+7b886546bc8cd11c4fc1217ad04e619076f315c7 data/coolarmor/tags/items/iron_armor.json
+5bf8a00ab35a32cf6f35dfef519bc3053f11c3a7 data/coolarmor/tags/items/leathered_armor_boots.json
+7279f9639628e5ed25853aaaf1da89958a96ae4f data/coolarmor/tags/items/leathered_armor_chestplate.json
+c3c23a4d145e21e2a0174375e9a8147a99f3881d data/coolarmor/tags/items/leathered_armor_helmet.json
+a2135fe45882953ee5b11688d56b92809a5cab57 data/coolarmor/tags/items/leathered_armor_leggings.json
+de9069fdb305e635b6f4c2f58a7f49c172de1c78 data/coolarmor/tags/items/netherite_armor_boots.json
+abdb9e0445529c260186ca06f2ad3921f0982f05 data/coolarmor/tags/items/netherite_armor_chestplate.json
+4de4bc37d8e8c721ca21db4b7666e6b76f69d182 data/coolarmor/tags/items/netherite_armor_helmet.json
+7ea6798f9fe88cd5b6de571af1443339b64666cc data/coolarmor/tags/items/netherite_armor_leggings.json
+e556e41b94af3e63a1a8c0e534e267da8ac79779 data/minecraft/tags/items/freeze_immune_wearables.json
+c4497914e57f7d4f7fbdd5fbb8fa5595d051f826 data/minecraft/tags/items/piglin_loved.json
+a9fd0c66894046f03e5e48d41c757ea936d2ec90 data/minecraft/tags/items/trimmable_armor.json

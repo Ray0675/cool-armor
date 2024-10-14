@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "tag": "minecraft:wool"
+  },
+  "base": {
+    "item": "minecraft:iron_boots"
+  },
+  "result": {
+    "item": "coolarmor:iron_wooled_boots"
+  },
+  "template": {
+    "item": "coolarmor:wooled_upgrade_smithing_template"
+  }
+}
