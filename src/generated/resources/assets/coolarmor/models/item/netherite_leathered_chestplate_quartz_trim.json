@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "coolarmor:item/leathered_chestplate_overlay",
+    "layer1": "coolarmor:item/netherite_leathered_chestplate",
+    "layer2": "minecraft:trims/items/chestplate_trim_quartz"
+  }
+}

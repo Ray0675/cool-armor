@@ -1,0 +1,57 @@
+{
+  "parent": "minecraft:nether/netherite_armor",
+  "criteria": {
+    "k_armor": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "coolarmor:netherite_gilded_helmet"
+            ]
+          },
+          {
+            "items": [
+              "coolarmor:netherite_gilded_chestplate"
+            ]
+          },
+          {
+            "items": [
+              "coolarmor:netherite_gilded_leggings"
+            ]
+          },
+          {
+            "items": [
+              "coolarmor:netherite_gilded_boots"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "coolarmor.advancement.description.gilded"
+    },
+    "frame": "challenge",
+    "hidden": false,
+    "icon": {
+      "item": "coolarmor:netherite_gilded_helmet",
+      "nbt": "{Damage:0}"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "coolarmor.advancement.title.gilded"
+    }
+  },
+  "requirements": [
+    [
+      "k_armor"
+    ]
+  ],
+  "rewards": {
+    "experience": 50
+  },
+  "sends_telemetry_event": true
+}
