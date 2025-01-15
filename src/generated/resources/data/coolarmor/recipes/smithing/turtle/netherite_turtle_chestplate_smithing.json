@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:scute"
+  },
+  "base": {
+    "item": "minecraft:netherite_chestplate"
+  },
+  "result": {
+    "item": "coolarmor:netherite_turtle_chestplate"
+  },
+  "template": {
+    "item": "coolarmor:turtle_upgrade_smithing_template"
+  }
+}
