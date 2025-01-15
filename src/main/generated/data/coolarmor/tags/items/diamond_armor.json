@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:diamond_helmet",
+    "minecraft:diamond_chestplate",
+    "minecraft:diamond_leggings",
+    "minecraft:diamond_boots",
+    "coolarmor:diamond_leathered_helmet",
+    "coolarmor:diamond_leathered_chestplate",
+    "coolarmor:diamond_leathered_leggings",
+    "coolarmor:diamond_leathered_boots",
+    "coolarmor:diamond_tinted_helmet"
+  ]
+}

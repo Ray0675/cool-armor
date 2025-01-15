@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:netherite_boots",
+    "coolarmor:netherite_leathered_boots",
+    "coolarmor:netherite_gilded_boots",
+    "coolarmor:netherite_turtle_boots"
+  ]
+}

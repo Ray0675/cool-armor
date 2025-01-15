@@ -1,0 +1,17 @@
+{
+  "required": true,
+  "package": "net.raylirov.coolarmor.main.utils.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "ModEnderManEntity",
+    "ModMagmaBlock",
+    "ModPiglinBrain",
+    "ModPowderSnowBlock",
+    "ModSculkSensorBlock",
+    "ModSculkShriekerBlock",
+    "ModVibrationSelector"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
