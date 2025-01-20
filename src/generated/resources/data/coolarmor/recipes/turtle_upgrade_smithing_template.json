@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:diamond"
+    },
+    "D": {
+      "item": "minecraft:scute"
+    },
+    "S": {
+      "item": "coolarmor:turtle_upgrade_smithing_template"
+    }
+  },
+  "pattern": [
+    "ASA",
+    "ADA",
+    "AAA"
+  ],
+  "result": {
+    "count": 2,
+    "item": "coolarmor:turtle_upgrade_smithing_template"
+  },
+  "show_notification": true
+}

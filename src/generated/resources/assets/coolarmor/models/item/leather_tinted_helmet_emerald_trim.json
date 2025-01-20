@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "coolarmor:item/leather_tinted_helmet_overlay",
+    "layer1": "coolarmor:item/leather_tinted_helmet",
+    "layer2": "coolarmor:item/tinted_helmet_overlay",
+    "layer3": "minecraft:trims/items/helmet_trim_emerald"
+  }
+}

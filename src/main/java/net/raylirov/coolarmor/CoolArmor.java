@@ -1,0 +1,70 @@
+package net.raylirov.coolarmor;
+
+<<<<<<< Updated upstream
+import com.mojang.logging.LogUtils;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
+import net.minecraftforge.event.server.ServerStartingEvent;
+import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.raylirov.coolarmor.main.init.ModCreativeModTabs;
+import net.raylirov.coolarmor.main.init.ModItems;
+import net.raylirov.coolarmor.main.utils.loot.ModLootModifiers;
+=======
+import net.fabricmc.api.ModInitializer;
+
+import net.raylirov.coolarmor.main.init.CAItemGroup;
+import net.raylirov.coolarmor.main.init.CAItems;
+import net.raylirov.coolarmor.main.utils.CACauldronBehaviors;
+import net.raylirov.coolarmor.main.utils.CALootTableModifiers;
+>>>>>>> Stashed changes
+import org.slf4j.Logger;
+
+@Mod(CoolArmor.MOD_ID)
+public class CoolArmor {
+    public static final String MOD_ID = "coolarmor";
+    private static final Logger LOGGER = LogUtils.getLogger();
+
+<<<<<<< Updated upstream
+    public CoolArmor() {
+        IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        eventBus.addListener(this::commonSetup);
+
+        ModCreativeModTabs.register(eventBus);
+        ModItems.register(eventBus);
+        ModLootModifiers.register(eventBus);
+
+        MinecraftForge.EVENT_BUS.register(this);
+        eventBus.addListener(this::addCreative);
+    }
+
+    private void commonSetup(final FMLCommonSetupEvent event) {}
+
+    private void addCreative(BuildCreativeModeTabContentsEvent event) {}
+
+    @SubscribeEvent
+    public void onServerStarting(ServerStartingEvent event) {}
+
+    @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+    public static class ClientModEvents {
+        @SubscribeEvent
+        public static void onClientSetup(FMLClientSetupEvent event) {
+
+        }
+    }
+}
+=======
+	@Override
+	public void onInitialize() {
+		CAItemGroup.registerItemGroup();
+		CAItems.registerModItems();
+		CALootTableModifiers.modifyLootTables();
+		CACauldronBehaviors.registerBehaviors();
+	}
+}
+>>>>>>> Stashed changes
