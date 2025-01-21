@@ -1,14 +1,10 @@
 package net.raylirov.coolarmor.content.armor;
 
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.item.*;
-import net.raylirov.coolarmor.main.utils.ArmorHelper;
+import net.minecraft.item.ArmorMaterial;
+import net.minecraft.item.DyeableArmorItem;
 
-public class LeatheredArmorItem extends ModArmorItem implements DyeableLeatherItem {
-    public LeatheredArmorItem(ArmorMaterial material, Type type, Properties properties) {
-        super(material, type, properties);
-    }
-    public boolean canWalkOnPowderedSnow(ItemStack stack, LivingEntity wearer) {
-        return ArmorHelper.anyLeatheredBoots(stack);
+public class LeatheredArmorItem extends DyeableArmorItem {
+    public LeatheredArmorItem(ArmorMaterial material, Type type, Settings settings) {
+        super(material, type, settings);
     }
 }

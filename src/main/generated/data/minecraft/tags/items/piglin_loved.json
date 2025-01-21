@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "coolarmor:netherite_gilded_helmet",
+    "coolarmor:netherite_gilded_chestplate",
+    "coolarmor:netherite_gilded_leggings",
+    "coolarmor:netherite_gilded_boots",
+    "coolarmor:golden_leathered_helmet",
+    "coolarmor:golden_leathered_chestplate",
+    "coolarmor:golden_leathered_leggings",
+    "coolarmor:golden_leathered_boots",
+    "coolarmor:golden_tinted_helmet"
+  ]
+}

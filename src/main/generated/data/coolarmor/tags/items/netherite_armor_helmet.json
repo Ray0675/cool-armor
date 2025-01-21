@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:netherite_helmet",
+    "coolarmor:netherite_leathered_helmet",
+    "coolarmor:netherite_gilded_helmet",
+    "coolarmor:netherite_turtle_helmet",
+    "coolarmor:netherite_tinted_helmet"
+  ]
+}

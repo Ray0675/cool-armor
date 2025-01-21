@@ -1,0 +1,26 @@
+{
+  "replace": false,
+  "values": [
+    "coolarmor:netherite_leathered_helmet",
+    "coolarmor:netherite_leathered_chestplate",
+    "coolarmor:netherite_leathered_leggings",
+    "coolarmor:netherite_leathered_boots",
+    "coolarmor:diamond_leathered_helmet",
+    "coolarmor:diamond_leathered_chestplate",
+    "coolarmor:diamond_leathered_leggings",
+    "coolarmor:diamond_leathered_boots",
+    "coolarmor:golden_leathered_helmet",
+    "coolarmor:golden_leathered_chestplate",
+    "coolarmor:golden_leathered_leggings",
+    "coolarmor:golden_leathered_boots",
+    "coolarmor:chainmail_leathered_helmet",
+    "coolarmor:chainmail_leathered_chestplate",
+    "coolarmor:chainmail_leathered_leggings",
+    "coolarmor:chainmail_leathered_boots",
+    "coolarmor:iron_leathered_helmet",
+    "coolarmor:iron_leathered_chestplate",
+    "coolarmor:iron_leathered_leggings",
+    "coolarmor:iron_leathered_boots",
+    "coolarmor:leather_tinted_helmet"
+  ]
+}
