@@ -5,24 +5,16 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "coolarmor:netherite_gilded_helmet"
-            ]
+            "tag": "coolarmor:gilded_armor_helmet"
           },
           {
-            "items": [
-              "coolarmor:netherite_gilded_chestplate"
-            ]
+            "tag": "coolarmor:gilded_armor_chestplate"
           },
           {
-            "items": [
-              "coolarmor:netherite_gilded_leggings"
-            ]
+            "tag": "coolarmor:gilded_armor_leggings"
           },
           {
-            "items": [
-              "coolarmor:netherite_gilded_boots"
-            ]
+            "tag": "coolarmor:gilded_armor_boots"
           }
         ]
       },

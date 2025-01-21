@@ -5,24 +5,16 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "coolarmor:netherite_turtle_helmet"
-            ]
+            "tag": "coolarmor:turtle_armor_helmet"
           },
           {
-            "items": [
-              "coolarmor:netherite_turtle_chestplate"
-            ]
+            "tag": "coolarmor:turtle_armor_chestplate"
           },
           {
-            "items": [
-              "coolarmor:netherite_turtle_leggings"
-            ]
+            "tag": "coolarmor:turtle_armor_leggings"
           },
           {
-            "items": [
-              "coolarmor:netherite_turtle_boots"
-            ]
+            "tag": "coolarmor:turtle_armor_boots"
           }
         ]
       },

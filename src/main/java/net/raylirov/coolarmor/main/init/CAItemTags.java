@@ -18,6 +18,19 @@ public class CAItemTags {
     public static final TagKey<Item> LEATHERED_ARMOR_LEGGINGS = CAItemTags.of("leathered_armor_leggings");
     public static final TagKey<Item> LEATHERED_ARMOR_BOOTS = CAItemTags.of("leathered_armor_boots");
 
+    public static final TagKey<Item> TURTLE_ARMOR_HELMET = CAItemTags.of("turtle_armor_helmet");
+    public static final TagKey<Item> TURTLE_ARMOR_CHESTPLATE = CAItemTags.of("turtle_armor_chestplate");
+    public static final TagKey<Item> TURTLE_ARMOR_LEGGINGS = CAItemTags.of("turtle_armor_leggings");
+    public static final TagKey<Item> TURTLE_ARMOR_BOOTS = CAItemTags.of("turtle_armor_boots");
+
+    public static final TagKey<Item> GILDED_ARMOR_HELMET = CAItemTags.of("gilded_armor_helmet");
+    public static final TagKey<Item> GILDED_ARMOR_CHESTPLATE = CAItemTags.of("gilded_armor_chestplate");
+    public static final TagKey<Item> GILDED_ARMOR_LEGGINGS = CAItemTags.of("gilded_armor_leggings");
+    public static final TagKey<Item> GILDED_ARMOR_BOOTS = CAItemTags.of("gilded_armor_boots");
+
+    public static final TagKey<Item> LEATHER_ARMOR_BOOTS = CAItemTags.of("leather_armor_boots");
+
+
     private static TagKey<Item> of(String id) {
         return TagKey.of(RegistryKeys.ITEM, new Identifier(CoolArmor.MOD_ID, id));
     }

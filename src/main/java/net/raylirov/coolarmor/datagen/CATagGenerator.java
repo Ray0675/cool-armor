@@ -2,6 +2,7 @@ package net.raylirov.coolarmor.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
+import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.ItemTags;
@@ -177,5 +178,37 @@ public class CATagGenerator extends FabricTagProvider.ItemTagProvider {
                         CAItems.GOLDEN_LEATHERED_BOOTS,
                         CAItems.CHAINMAIL_LEATHERED_BOOTS,
                         CAItems.IRON_LEATHERED_BOOTS);
+
+        getOrCreateTagBuilder(CAItemTags.LEATHER_ARMOR_BOOTS)
+                .add(CAItems.NETHERITE_LEATHERED_BOOTS,
+                        CAItems.DIAMOND_LEATHERED_BOOTS,
+                        CAItems.GOLDEN_LEATHERED_BOOTS,
+                        CAItems.CHAINMAIL_LEATHERED_BOOTS,
+                        CAItems.IRON_LEATHERED_BOOTS,
+                        Items.LEATHER_BOOTS);
+
+        getOrCreateTagBuilder(CAItemTags.GILDED_ARMOR_HELMET)
+                .add(CAItems.NETHERITE_GILDED_HELMET);
+
+        getOrCreateTagBuilder(CAItemTags.GILDED_ARMOR_CHESTPLATE)
+                .add(CAItems.NETHERITE_GILDED_CHESTPLATE);
+
+        getOrCreateTagBuilder(CAItemTags.GILDED_ARMOR_LEGGINGS)
+                .add(CAItems.NETHERITE_GILDED_LEGGINGS);
+
+        getOrCreateTagBuilder(CAItemTags.GILDED_ARMOR_BOOTS)
+                .add(CAItems.NETHERITE_GILDED_BOOTS);
+
+        getOrCreateTagBuilder(CAItemTags.TURTLE_ARMOR_HELMET)
+                .add(CAItems.NETHERITE_TURTLE_HELMET);
+
+        getOrCreateTagBuilder(CAItemTags.TURTLE_ARMOR_CHESTPLATE)
+                .add(CAItems.NETHERITE_TURTLE_CHESTPLATE);
+
+        getOrCreateTagBuilder(CAItemTags.TURTLE_ARMOR_LEGGINGS)
+                .add(CAItems.NETHERITE_TURTLE_LEGGINGS);
+
+        getOrCreateTagBuilder(CAItemTags.TURTLE_ARMOR_BOOTS)
+                .add(CAItems.NETHERITE_TURTLE_BOOTS);
     }
 }
