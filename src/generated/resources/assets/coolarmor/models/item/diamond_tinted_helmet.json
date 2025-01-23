@@ -63,7 +63,7 @@
     }
   ],
   "textures": {
-    "layer0": "coolarmor:item/tinted_helmet_overlay",
-    "layer1": "coolarmor:item/diamond_tinted_helmet"
+    "layer0": "coolarmor:item/diamond_tinted_helmet",
+    "layer1": "coolarmor:item/tinted_helmet_overlay"
   }
 }

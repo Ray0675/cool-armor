@@ -1,0 +1,49 @@
+{
+  "parent": "minecraft:nether/netherite_armor",
+  "criteria": {
+    "k_armor": {
+      "conditions": {
+        "items": [
+          {
+            "tag": "coolarmor:turtle_armor_helmet"
+          },
+          {
+            "tag": "coolarmor:turtle_armor_chestplate"
+          },
+          {
+            "tag": "coolarmor:turtle_armor_leggings"
+          },
+          {
+            "tag": "coolarmor:turtle_armor_boots"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "coolarmor.advancement.description.turtle_power"
+    },
+    "frame": "challenge",
+    "hidden": false,
+    "icon": {
+      "item": "coolarmor:netherite_turtle_helmet",
+      "nbt": "{Damage:0}"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "coolarmor.advancement.title.turtle_power"
+    }
+  },
+  "requirements": [
+    [
+      "k_armor"
+    ]
+  ],
+  "rewards": {
+    "experience": 50
+  },
+  "sends_telemetry_event": true
+}

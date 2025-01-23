@@ -4,15 +4,15 @@
   "package": "net.raylirov.coolarmor.main.utils.mixin",
   "refmap": "mixins.coolarmor.refmap.json",
   "mixins": [
-    "ModMagmaBlock",
-    "ModSculkSensorBlock",
-    "ModSculkShriekerBlock",
-    "ModVibrationSelector"
+    "CAMagmaBlock",
+    "CASculkSensorBlock",
+    "CASculkShriekerBlock",
+    "CAVibrationSelector"
   ],
   "injectors": {
     "defaultRequire": 1
   },
   "client": [
-    "ModHumanoidArmorLayer"
+    "CAHumanoidArmorLayer"
   ]
 }

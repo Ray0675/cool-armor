@@ -1,23 +1,77 @@
 package net.raylirov.coolarmor.main.utils;
 
 import net.minecraft.ChatFormatting;
-import net.minecraft.advancements.critereon.*;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.item.ArmorItem;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraftforge.registries.RegistryObject;
+import net.minecraft.world.item.*;
 import net.raylirov.coolarmor.CoolArmor;
-import net.raylirov.coolarmor.content.armor.ModArmorMaterials;
-import net.raylirov.coolarmor.main.init.ModItems;
+import net.raylirov.coolarmor.content.armor.CAArmorMaterials;
 
 import java.util.Calendar;
 import java.util.List;
 
 public class ArmorHelper {
+
+    public static List<ArmorMaterial> tintedHelmetMaterials = List.of(CAArmorMaterials.NETHERITE_TINTED, CAArmorMaterials.DIAMOND_TINTED, CAArmorMaterials.GOLDEN_TINTED, CAArmorMaterials.CHAINMAIL_TINTED, CAArmorMaterials.IRON_TINTED, CAArmorMaterials.LEATHER_TINTED);
+    public static List<ArmorMaterial> leatherBootsMaterials = List.of(CAArmorMaterials.NETHERITE_LEATHERED, CAArmorMaterials.DIAMOND_LEATHERED, CAArmorMaterials.GOLDEN_LEATHERED, CAArmorMaterials.CHAINMAIL_LEATHERED, CAArmorMaterials.IRON_LEATHERED, ArmorMaterials.LEATHER);
+    public static List<ArmorMaterial> goldenArmorMaterials = List.of(CAArmorMaterials.NETHERITE_GILDED, CAArmorMaterials.GOLDEN_TINTED, CAArmorMaterials.GOLDEN_LEATHERED);
+
+    public static List<ArmorMaterial> modelGenTintedHelmetMaterials = List.of(CAArmorMaterials.NETHERITE_TINTED, CAArmorMaterials.DIAMOND_TINTED, CAArmorMaterials.GOLDEN_TINTED, CAArmorMaterials.CHAINMAIL_TINTED, CAArmorMaterials.IRON_TINTED);
+    public static List<ArmorMaterial> modelGenLeatherArmorMaterials = List.of(CAArmorMaterials.NETHERITE_LEATHERED, CAArmorMaterials.DIAMOND_LEATHERED, CAArmorMaterials.GOLDEN_LEATHERED, CAArmorMaterials.CHAINMAIL_LEATHERED, CAArmorMaterials.IRON_LEATHERED, CAArmorMaterials.LEATHER_TINTED);
+
+    private static final ChatFormatting DESCRIPTION_FORMAT = ChatFormatting.BLUE;
+    private static final ChatFormatting TITLE_FORMAT = ChatFormatting.GRAY;
+
+    public static final Component LEATHER_UPGRADE_BASE_SLOT_DESCRIPTION = Component.translatable("item." + CoolArmor.MOD_ID + ".smithing_template.leather_upgrade.base_slot_description");
+    public static final Component TURTLE_UPGRADE_BASE_SLOT_DESCRIPTION = Component.translatable("item." + CoolArmor.MOD_ID + ".smithing_template.turtle_upgrade.base_slot_description");
+    public static final Component GILDED_UPGRADE_BASE_SLOT_DESCRIPTION = Component.translatable("item." + CoolArmor.MOD_ID + ".smithing_template.gilded_upgrade.base_slot_description");
+    public static final Component WOOLED_UPGRADE_BASE_SLOT_DESCRIPTION = Component.translatable("item." + CoolArmor.MOD_ID + ".smithing_template.wooled_upgrade.base_slot_description");
+    public static final Component TINTED_UPGRADE_BASE_SLOT_DESCRIPTION = Component.translatable("item." + CoolArmor.MOD_ID + ".smithing_template.tinted_upgrade.base_slot_description");
+
+    public static final Component LEATHER_UPGRADE_ADDITIONS_SLOT_DESCRIPTION = Component.translatable("item." + CoolArmor.MOD_ID + ".smithing_template.leather_upgrade.additions_slot_description");
+    public static final Component TURTLE_UPGRADE_ADDITIONS_SLOT_DESCRIPTION = Component.translatable("item." + CoolArmor.MOD_ID + ".smithing_template.turtle_upgrade.additions_slot_description");
+    public static final Component GILDED_UPGRADE_ADDITIONS_SLOT_DESCRIPTION = Component.translatable("item." + CoolArmor.MOD_ID + ".smithing_template.gilded_upgrade.additions_slot_description");
+    public static final Component WOOLED_UPGRADE_ADDITIONS_SLOT_DESCRIPTION = Component.translatable("item." + CoolArmor.MOD_ID + ".smithing_template.wooled_upgrade.additions_slot_description");
+    public static final Component TINTED_UPGRADE_ADDITIONS_SLOT_DESCRIPTION = Component.translatable("item." + CoolArmor.MOD_ID + ".smithing_template.tinted_upgrade.additions_slot_description");
+
+    public static final Component LEATHER_UPGRADE = Component.translatable("upgrade." + CoolArmor.MOD_ID + ".leather_upgrade").withStyle(TITLE_FORMAT);
+    public static final Component TURTLE_UPGRADE = Component.translatable("upgrade." + CoolArmor.MOD_ID + ".turtle_upgrade").withStyle(TITLE_FORMAT);
+    public static final Component GILDED_UPGRADE = Component.translatable("upgrade." + CoolArmor.MOD_ID + ".gilded_upgrade").withStyle(TITLE_FORMAT);
+    public static final Component WOOLED_UPGRADE = Component.translatable("upgrade." + CoolArmor.MOD_ID + ".wooled_upgrade").withStyle(TITLE_FORMAT);
+    public static final Component TINTED_UPGRADE = Component.translatable("upgrade." + CoolArmor.MOD_ID + ".tinted_upgrade").withStyle(TITLE_FORMAT);
+
+    public static final Component LEATHER_UPGRADE_APPLIES_TO = Component.translatable("item." + CoolArmor.MOD_ID + ".smithing_template.leather_upgrade.applies_to").withStyle(DESCRIPTION_FORMAT);
+    public static final Component TURTLE_UPGRADE_APPLIES_TO = Component.translatable("item." + CoolArmor.MOD_ID + ".smithing_template.turtle_upgrade.applies_to").withStyle(DESCRIPTION_FORMAT);
+    public static final Component GILDED_UPGRADE_APPLIES_TO = Component.translatable("item." + CoolArmor.MOD_ID + ".smithing_template.gilded_upgrade.applies_to").withStyle(DESCRIPTION_FORMAT);
+    public static final Component WOOLED_UPGRADE_APPLIES_TO = Component.translatable("item." + CoolArmor.MOD_ID + ".smithing_template.wooled_upgrade.applies_to").withStyle(DESCRIPTION_FORMAT);
+    public static final Component TINTED_UPGRADE_APPLIES_TO = Component.translatable("item." + CoolArmor.MOD_ID + ".smithing_template.tinted_upgrade.applies_to").withStyle(DESCRIPTION_FORMAT);
+
+    public static final Component LEATHER_UPGRADE_INGREDIENTS = Component.translatable("item." + CoolArmor.MOD_ID + ".smithing_template.leather_upgrade.ingredients").withStyle(DESCRIPTION_FORMAT);
+    public static final Component TURTLE_UPGRADE_INGREDIENTS = Component.translatable("item." + CoolArmor.MOD_ID + ".smithing_template.turtle_upgrade.ingredients").withStyle(DESCRIPTION_FORMAT);
+    public static final Component GILDED_UPGRADE_INGREDIENTS = Component.translatable("item." + CoolArmor.MOD_ID + ".smithing_template.gilded_upgrade.ingredients").withStyle(DESCRIPTION_FORMAT);
+    public static final Component WOOLED_UPGRADE_INGREDIENTS = Component.translatable("item." + CoolArmor.MOD_ID + ".smithing_template.wooled_upgrade.ingredients").withStyle(DESCRIPTION_FORMAT);
+    public static final Component TINTED_UPGRADE_INGREDIENTS = Component.translatable("item." + CoolArmor.MOD_ID + ".smithing_template.tinted_upgrade.ingredients").withStyle(DESCRIPTION_FORMAT);
+
+    public static final ResourceLocation EMPTY_SLOT_HELMET = new ResourceLocation("item/empty_armor_slot_helmet");
+    public static final ResourceLocation EMPTY_SLOT_CHESTPLATE = new ResourceLocation("item/empty_armor_slot_chestplate");
+    public static final ResourceLocation EMPTY_SLOT_LEGGINGS = new ResourceLocation("item/empty_armor_slot_leggings");
+    public static final ResourceLocation EMPTY_SLOT_BOOTS = new ResourceLocation("item/empty_armor_slot_boots");
+
+    public static final ResourceLocation EMPTY_SLOT_LEATHER = new ResourceLocation(CoolArmor.MOD_ID,"item/empty_slot_leather");
+    public static final ResourceLocation EMPTY_SLOT_AMETHYST_SHARD = new ResourceLocation(CoolArmor.MOD_ID, "item/empty_slot_amethyst_shard");
+    public static final ResourceLocation EMPTY_SLOT_SCUTE = new ResourceLocation(CoolArmor.MOD_ID, "item/empty_slot_scute");
+    public static final ResourceLocation EMPTY_SLOT_BLOCK = new ResourceLocation(CoolArmor.MOD_ID,"item/empty_slot_block");
+    private static final ResourceLocation EMPTY_SLOT_INGOT = new ResourceLocation("item/empty_slot_ingot");
+
+    public static final List<ResourceLocation> createUpgradeFullArmorIconList = List.of(EMPTY_SLOT_HELMET, EMPTY_SLOT_CHESTPLATE, EMPTY_SLOT_LEGGINGS, EMPTY_SLOT_BOOTS);
+    public static final List<ResourceLocation> createUpgradeHelmetIconList = List.of(EMPTY_SLOT_HELMET);
+    public static final List<ResourceLocation> createUpgradeBootsIconList = List.of(EMPTY_SLOT_BOOTS);
+    public static final List<ResourceLocation> createLeatherUpgradeMaterialList = List.of(EMPTY_SLOT_LEATHER);
+    public static final List<ResourceLocation> createIngotUpgradeMaterialList = List.of(EMPTY_SLOT_INGOT);
+    public static final List<ResourceLocation> createTurtleUpgradeMaterialList = List.of(EMPTY_SLOT_SCUTE, EMPTY_SLOT_HELMET);
+    public static final List<ResourceLocation> createBlockUpgradeMaterialList = List.of(EMPTY_SLOT_BLOCK);
+    public static final List<ResourceLocation> createAmethystUpgradeMaterialList = List.of(EMPTY_SLOT_AMETHYST_SHARD);
 
     public static boolean currentMonth = false;
     public static boolean summer = false;
@@ -27,6 +81,44 @@ public class ArmorHelper {
     public static byte cntCheckSummer = 0;
     public static byte cntCheckHalloween = 0;
     public static byte cntCheckXmas = 0;
+
+    public static boolean trimArmor(ArmorItem armorItem) {
+        return isOneOfArmor(armorItem, modelGenLeatherArmorMaterials) ||
+                isNeededArmorPiece(armorItem, CAArmorMaterials.IRON_WOOLED) ||
+                isOneOfArmor(armorItem, modelGenTintedHelmetMaterials);
+    }
+
+    public static boolean isNeededFullArmor(LivingEntity entity, ArmorMaterial material) {
+        if (entity == null) return false;
+
+        Iterable<ItemStack> iterable = entity.getArmorSlots();
+
+        for (ItemStack itemStack : iterable) {
+            Item item = itemStack.getItem();
+
+            if (!(item instanceof ArmorItem) || ((ArmorItem) item).getMaterial() != material) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    public static boolean isOneOfArmor(Item item, List<ArmorMaterial> materials) {
+        if (item instanceof ArmorItem armor) {
+            ArmorMaterial material = armor.getMaterial();
+            for (ArmorMaterial mat : materials) {
+                if (material == mat) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    public static boolean isNeededArmorPiece(Item item, ArmorMaterial material) {
+        return item instanceof ArmorItem armor && armor.getMaterial() == material;
+    }
 
     public static boolean getCurrentMonth() {
         if (currentMonth) {
@@ -39,7 +131,7 @@ public class ArmorHelper {
 
         byte[] monthMass = {6, 10, 11, 12};
 
-        for(byte month = 0; month < 4; month++) {
+        for (byte month = 0; month < 4; month++) {
             if (calendar.get(Calendar.MONTH) + 1 == monthMass[month]) {
                 currentMonth = true;
                 break;
@@ -98,166 +190,5 @@ public class ArmorHelper {
         cntCheckXmas++;
         return xmas;
     }
-
-
-    public static boolean isWearingAnyTintedHelmet(ItemStack item){
-        return item.is(ModItems.NETHERITE_TINTED_HELMET.get()) ||
-                item.is(ModItems.DIAMOND_TINTED_HELMET.get()) ||
-                item.is(ModItems.GOLDEN_TINTED_HELMET.get()) ||
-                item.is(ModItems.CHAINMAIL_TINTED_HELMET.get()) ||
-                item.is(ModItems.IRON_TINTED_HELMET.get()) ||
-                item.is(ModItems.LEATHER_TINTED_HELMET.get());
-    }
-
-    public static boolean isWearingNeededBoots(ItemStack onEntity, Item boots) {
-        return onEntity.is(boots);
-    }
-
-    public static boolean inFullTurtleArmor(LivingEntity entity) {
-        ItemStack chestplate = entity.getItemBySlot(EquipmentSlot.CHEST);
-        ItemStack leggings = entity.getItemBySlot(EquipmentSlot.LEGS);
-        ItemStack boots = entity.getItemBySlot(EquipmentSlot.FEET);
-
-        return chestplate.is(ModItems.NETHERITE_TURTLE_CHESTPLATE.get())
-                && leggings.is(ModItems.NETHERITE_TURTLE_LEGGINGS.get())
-                && boots.is(ModItems.NETHERITE_TURTLE_BOOTS.get());
-    }
-
-    // For IF in ModelGen
-    public static boolean trimArmorAnyTintedHelmet(RegistryObject<Item> itemRegistryObject){
-        if (itemRegistryObject.get() instanceof ArmorItem armorItem){
-            return armorItem.getMaterial() == ModArmorMaterials.NETHERITE_TINTED ||
-                    armorItem.getMaterial() == ModArmorMaterials.DIAMOND_TINTED ||
-                    armorItem.getMaterial() == ModArmorMaterials.GOLDEN_TINTED ||
-                    armorItem.getMaterial() == ModArmorMaterials.CHAINMAIL_TINTED ||
-                    armorItem.getMaterial() == ModArmorMaterials.IRON_TINTED;
-        }
-        return false;
-    }
-    public static boolean trimArmorAnyLeatherArmor(RegistryObject<Item> itemRegistryObject){
-        if (itemRegistryObject.get() instanceof ArmorItem armorItem){
-            return armorItem.getMaterial() == ModArmorMaterials.NETHERITE_LEATHERED ||
-                    armorItem.getMaterial() == ModArmorMaterials.DIAMOND_LEATHERED ||
-                    armorItem.getMaterial() == ModArmorMaterials.GOLDEN_LEATHERED ||
-                    armorItem.getMaterial() == ModArmorMaterials.CHAINMAIL_LEATHERED ||
-                    armorItem.getMaterial() == ModArmorMaterials.IRON_LEATHERED ||
-                    armorItem.getMaterial() == ModArmorMaterials.LEATHER_TINTED;
-        }
-        return false;
-    }
-
-    public static boolean trimArmorAnyWooledArmor(RegistryObject<Item> itemRegistryObject){
-        if (itemRegistryObject.get() instanceof ArmorItem armorItem){
-            return armorItem.getMaterial() == ModArmorMaterials.IRON_WOOLED;
-        }
-        return false;
-
-    }
-    // For IF in ModelGen
-
-    // For LeatheredArmorItem
-    public static boolean anyLeatheredBoots(ItemStack stack){
-        return stack.is(ModItems.NETHERITE_LEATHERED_BOOTS.get()) ||
-                stack.is(ModItems.GOLDEN_LEATHERED_BOOTS.get()) ||
-                stack.is(ModItems.CHAINMAIL_LEATHERED_BOOTS.get()) ||
-                stack.is(ModItems.DIAMOND_LEATHERED_BOOTS.get()) ||
-                stack.is(ModItems.IRON_LEATHERED_BOOTS.get());
-    }
-    // For LeatheredArmorItem
-
-
-    // For advancements
-    public static InventoryChangeTrigger.TriggerInstance hasNetheriteTurtleArmor() {
-        return InventoryChangeTrigger.TriggerInstance.hasItems(
-                ModItems.NETHERITE_TURTLE_HELMET.get(),
-                ModItems.NETHERITE_TURTLE_CHESTPLATE.get(),
-                ModItems.NETHERITE_TURTLE_LEGGINGS.get(),
-                ModItems.NETHERITE_TURTLE_BOOTS.get());
-    }
-
-    public static InventoryChangeTrigger.TriggerInstance hasNetheriteGildedArmor() {
-        return InventoryChangeTrigger.TriggerInstance.hasItems(
-                ModItems.NETHERITE_GILDED_HELMET.get(),
-                ModItems.NETHERITE_GILDED_CHESTPLATE.get(),
-                ModItems.NETHERITE_GILDED_LEGGINGS.get(),
-                ModItems.NETHERITE_GILDED_BOOTS.get());
-    }
-    // For advancements
-
-    private static final ChatFormatting DESCRIPTION_FORMAT = ChatFormatting.BLUE;
-    private static final ChatFormatting TITLE_FORMAT = ChatFormatting.GRAY;
-
-    public static List<ResourceLocation> createUpgradeFullArmorIconList() {
-        return List.of(EMPTY_SLOT_HELMET, EMPTY_SLOT_CHESTPLATE, EMPTY_SLOT_LEGGINGS, EMPTY_SLOT_BOOTS);
-    }
-
-    public static List<ResourceLocation> createUpgradeHelmetIconList() {
-        return List.of(EMPTY_SLOT_HELMET);
-    }
-
-    public static List<ResourceLocation> createUpgradeBootsIconList() {
-        return List.of(EMPTY_SLOT_BOOTS);
-    }
-
-    public static List<ResourceLocation> createLeatherUpgradeMaterialList() {
-        return List.of(EMPTY_SLOT_LEATHER);
-    }
-
-    public static List<ResourceLocation> createIngotUpgradeMaterialList() {
-        return List.of(EMPTY_SLOT_INGOT);
-    }
-
-    public static List<ResourceLocation> createTurtleUpgradeMaterialList() {
-        return List.of(EMPTY_SLOT_SCUTE, EMPTY_SLOT_HELMET);
-    }
-
-    public static List<ResourceLocation> createBlockUpgradeMaterialList() {
-        return List.of(EMPTY_SLOT_BLOCK);
-    }
-
-    public static List<ResourceLocation> createAmethystUpgradeMaterialList() {
-        return List.of(EMPTY_SLOT_AMETHYST_SHARD);
-    }
-
-    public static final Component LEATHER_UPGRADE_BASE_SLOT_DESCRIPTION = Component.translatable("item." + CoolArmor.MOD_ID + ".smithing_template.leather_upgrade.base_slot_description");
-    public static final Component TURTLE_UPGRADE_BASE_SLOT_DESCRIPTION = Component.translatable("item." + CoolArmor.MOD_ID + ".smithing_template.turtle_upgrade.base_slot_description");
-    public static final Component GILDED_UPGRADE_BASE_SLOT_DESCRIPTION = Component.translatable("item." + CoolArmor.MOD_ID + ".smithing_template.gilded_upgrade.base_slot_description");
-    public static final Component WOOLED_UPGRADE_BASE_SLOT_DESCRIPTION = Component.translatable("item." + CoolArmor.MOD_ID + ".smithing_template.wooled_upgrade.base_slot_description");
-    public static final Component TINTED_UPGRADE_BASE_SLOT_DESCRIPTION = Component.translatable("item." + CoolArmor.MOD_ID + ".smithing_template.tinted_upgrade.base_slot_description");
-
-    public static final Component LEATHER_UPGRADE_ADDITIONS_SLOT_DESCRIPTION = Component.translatable("item." + CoolArmor.MOD_ID + ".smithing_template.leather_upgrade.additions_slot_description");
-    public static final Component TURTLE_UPGRADE_ADDITIONS_SLOT_DESCRIPTION = Component.translatable("item." + CoolArmor.MOD_ID + ".smithing_template.turtle_upgrade.additions_slot_description");
-    public static final Component GILDED_UPGRADE_ADDITIONS_SLOT_DESCRIPTION = Component.translatable("item." + CoolArmor.MOD_ID + ".smithing_template.gilded_upgrade.additions_slot_description");
-    public static final Component WOOLED_UPGRADE_ADDITIONS_SLOT_DESCRIPTION = Component.translatable("item." + CoolArmor.MOD_ID + ".smithing_template.wooled_upgrade.additions_slot_description");
-    public static final Component TINTED_UPGRADE_ADDITIONS_SLOT_DESCRIPTION = Component.translatable("item." + CoolArmor.MOD_ID + ".smithing_template.tinted_upgrade.additions_slot_description");
-
-    public static final Component LEATHER_UPGRADE = Component.translatable("upgrade." + CoolArmor.MOD_ID + ".leather_upgrade").withStyle(TITLE_FORMAT);
-    public static final Component TURTLE_UPGRADE = Component.translatable("upgrade." + CoolArmor.MOD_ID + ".turtle_upgrade").withStyle(TITLE_FORMAT);
-    public static final Component GILDED_UPGRADE = Component.translatable("upgrade." + CoolArmor.MOD_ID + ".gilded_upgrade").withStyle(TITLE_FORMAT);
-    public static final Component WOOLED_UPGRADE = Component.translatable("upgrade." + CoolArmor.MOD_ID + ".wooled_upgrade").withStyle(TITLE_FORMAT);
-    public static final Component TINTED_UPGRADE = Component.translatable("upgrade." + CoolArmor.MOD_ID + ".tinted_upgrade").withStyle(TITLE_FORMAT);
-
-    public static final Component LEATHER_UPGRADE_APPLIES_TO = Component.translatable("item." + CoolArmor.MOD_ID + ".smithing_template.leather_upgrade.applies_to").withStyle(DESCRIPTION_FORMAT);
-    public static final Component TURTLE_UPGRADE_APPLIES_TO = Component.translatable("item." + CoolArmor.MOD_ID + ".smithing_template.turtle_upgrade.applies_to").withStyle(DESCRIPTION_FORMAT);
-    public static final Component GILDED_UPGRADE_APPLIES_TO = Component.translatable("item." + CoolArmor.MOD_ID + ".smithing_template.gilded_upgrade.applies_to").withStyle(DESCRIPTION_FORMAT);
-    public static final Component WOOLED_UPGRADE_APPLIES_TO = Component.translatable("item." + CoolArmor.MOD_ID + ".smithing_template.wooled_upgrade.applies_to").withStyle(DESCRIPTION_FORMAT);
-    public static final Component TINTED_UPGRADE_APPLIES_TO = Component.translatable("item." + CoolArmor.MOD_ID + ".smithing_template.tinted_upgrade.applies_to").withStyle(DESCRIPTION_FORMAT);
-
-    public static final Component LEATHER_UPGRADE_INGREDIENTS = Component.translatable("item." + CoolArmor.MOD_ID + ".smithing_template.leather_upgrade.ingredients").withStyle(DESCRIPTION_FORMAT);
-    public static final Component TURTLE_UPGRADE_INGREDIENTS = Component.translatable("item." + CoolArmor.MOD_ID + ".smithing_template.turtle_upgrade.ingredients").withStyle(DESCRIPTION_FORMAT);
-    public static final Component GILDED_UPGRADE_INGREDIENTS = Component.translatable("item." + CoolArmor.MOD_ID + ".smithing_template.gilded_upgrade.ingredients").withStyle(DESCRIPTION_FORMAT);
-    public static final Component WOOLED_UPGRADE_INGREDIENTS = Component.translatable("item." + CoolArmor.MOD_ID + ".smithing_template.wooled_upgrade.ingredients").withStyle(DESCRIPTION_FORMAT);
-    public static final Component TINTED_UPGRADE_INGREDIENTS = Component.translatable("item." + CoolArmor.MOD_ID + ".smithing_template.tinted_upgrade.ingredients").withStyle(DESCRIPTION_FORMAT);
-
-    public static final ResourceLocation EMPTY_SLOT_HELMET = new ResourceLocation("item/empty_armor_slot_helmet");
-    public static final ResourceLocation EMPTY_SLOT_CHESTPLATE = new ResourceLocation("item/empty_armor_slot_chestplate");
-    public static final ResourceLocation EMPTY_SLOT_LEGGINGS = new ResourceLocation("item/empty_armor_slot_leggings");
-    public static final ResourceLocation EMPTY_SLOT_BOOTS = new ResourceLocation("item/empty_armor_slot_boots");
-
-    public static final ResourceLocation EMPTY_SLOT_LEATHER = new ResourceLocation(CoolArmor.MOD_ID,"item/empty_slot_leather");
-    public static final ResourceLocation EMPTY_SLOT_AMETHYST_SHARD = new ResourceLocation(CoolArmor.MOD_ID, "item/empty_slot_amethyst_shard");
-    public static final ResourceLocation EMPTY_SLOT_SCUTE = new ResourceLocation(CoolArmor.MOD_ID, "item/empty_slot_scute");
-    public static final ResourceLocation EMPTY_SLOT_BLOCK = new ResourceLocation(CoolArmor.MOD_ID,"item/empty_slot_block");
-    private static final ResourceLocation EMPTY_SLOT_INGOT = new ResourceLocation("item/empty_slot_ingot");
 
 }

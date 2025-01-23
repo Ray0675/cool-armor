@@ -1,14 +1,23 @@
-// 1.20.1	2025-01-14T19:55:43.9625923	Tags for minecraft:item mod id coolarmor
+// 1.20.1	2025-01-23T03:46:32.9723235	Tags for minecraft:item mod id coolarmor
 153af5daea81bb3fc7d54de7604fa66f63e79636 data/coolarmor/tags/items/diamond_armor.json
+397ab3338eba53da21d68111aff5d7a900cf8751 data/coolarmor/tags/items/gilded_armor_boots.json
+e2cfe479e84d505c02d5542a475ee5c54646cd3a data/coolarmor/tags/items/gilded_armor_chestplate.json
+cf9b8802cbb7fac0c5e89ff3cfcc888c2852daa2 data/coolarmor/tags/items/gilded_armor_helmet.json
+8de55226cdc7e0451a8ea216f61484e2f6c75c96 data/coolarmor/tags/items/gilded_armor_leggings.json
 7b886546bc8cd11c4fc1217ad04e619076f315c7 data/coolarmor/tags/items/iron_armor.json
 5bf8a00ab35a32cf6f35dfef519bc3053f11c3a7 data/coolarmor/tags/items/leathered_armor_boots.json
 7279f9639628e5ed25853aaaf1da89958a96ae4f data/coolarmor/tags/items/leathered_armor_chestplate.json
 c3c23a4d145e21e2a0174375e9a8147a99f3881d data/coolarmor/tags/items/leathered_armor_helmet.json
 a2135fe45882953ee5b11688d56b92809a5cab57 data/coolarmor/tags/items/leathered_armor_leggings.json
+cff3991d0a14bdb350d96505eb803fc8fad52be5 data/coolarmor/tags/items/leather_armor_boots.json
 de9069fdb305e635b6f4c2f58a7f49c172de1c78 data/coolarmor/tags/items/netherite_armor_boots.json
 abdb9e0445529c260186ca06f2ad3921f0982f05 data/coolarmor/tags/items/netherite_armor_chestplate.json
 4de4bc37d8e8c721ca21db4b7666e6b76f69d182 data/coolarmor/tags/items/netherite_armor_helmet.json
 7ea6798f9fe88cd5b6de571af1443339b64666cc data/coolarmor/tags/items/netherite_armor_leggings.json
+561889a8394baa8f84ab09d37a26306b0b5e8bf1 data/coolarmor/tags/items/turtle_armor_boots.json
+358eef4d0beb835f95e40a6039f9b946e4b52ad3 data/coolarmor/tags/items/turtle_armor_chestplate.json
+de19ad2bc20afbbdde71be55479fcd7d86ed0963 data/coolarmor/tags/items/turtle_armor_helmet.json
+11a64f6108c9a81bc39ded212067e8a2c25b8b1d data/coolarmor/tags/items/turtle_armor_leggings.json
 e556e41b94af3e63a1a8c0e534e267da8ac79779 data/minecraft/tags/items/freeze_immune_wearables.json
 c4497914e57f7d4f7fbdd5fbb8fa5595d051f826 data/minecraft/tags/items/piglin_loved.json
 a9fd0c66894046f03e5e48d41c757ea936d2ec90 data/minecraft/tags/items/trimmable_armor.json
